@@ -1,0 +1,6 @@
+name = Ulf MitVadehav
+version = VERSION
+core = 7.x
+base theme = ulf_default
+
+stylesheets[all][] = css/ulf-styles-mitvadehav.css
