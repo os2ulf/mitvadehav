@@ -4,32 +4,87 @@
 
 body {
   background: $footer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.header {
-  position: relative;
-  background: none;
-  background-color: $white;
-  height: 85px;
+.page--wrapper {
+  .header {
+    position: relative;
+    background: none;
+    background-color: $white;
+    height: 160px;
+
+    &--inner {
+      text-align: center;
+    }
+
+    &--logo {
+      position: relative;
+      top: 60px;
+
+      img {
+        width: 375px;
+      }
+    }
+  }
 }
 
 .nav {
   background: $white;
   text-align: center;
+  padding: 15px 0 50px;
 
   &--list-dropdown-link,
   &--list-link {
     @extend %nav--list-link;
+
+    &.active-trail {
+      background-color: $footer;
+    }
+
+    &:hover {
+      background-color: $page;
+    }
+  }
+
+  &--list-dropdown-item,
+  &--list-item {
+    &.active-trail {
+      background-color: $footer;
+    }
+    &:hover {
+      background-color: $page;
+    }
+    &.expanded {
+      padding-right: 35px;
+
+      // Add dropdown arrow
+      &:after {
+        right: 15px;
+        background-image: url("/profiles/ulf/themes/ulf_default/images/arrow.svg");
+      }
+
+      .nav--list-link {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &--sub {
+    border: 1px solid $gray-lighter;
   }
 }
 
 %nav--list-link {
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 40px;
-  padding:  0 $spacing;
+  padding: 0 $spacing;
   vertical-align: middle;
   text-transform: uppercase;
+  font-size: 18px;
 
   @include strip-link-styles($black);
 }
@@ -61,7 +116,34 @@ a {
 
 .footer {
   background: $footer;
-  color: $white;
+  color: $gray-darker;
+  height: 475px;
+
+  &--inner {
+    @include breakpoint($node-breakpoint) {
+      height: 475px;
+      position: relative;
+      padding: 100px 0 100px 330px;
+      box-sizing: border-box;
+    }
+
+
+    &--image {
+      background-image: url('../images/bird.jpg');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      width: 468px;
+      height: 475px;
+      position: absolute;
+      left: -190px;
+      bottom: 0;
+      display: none;
+
+      @include breakpoint($node-breakpoint) {
+        display: block;
+      }
+    }
+  }
 
   // Content elements in footer is editable by editors. We set some defaults.
   hr {
@@ -69,7 +151,14 @@ a {
   }
 
   a {
-    @include strip-link-styles($white, underline);
+    @include strip-link-styles($black, underline);
+  }
+
+  h3 {
+    color: $black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
 }
 
@@ -132,7 +221,7 @@ a {
 
   &--collection-label {
     color: $white;
-    background: $link-color;
+    background: $block-dark;
   }
 }
 
@@ -203,7 +292,6 @@ a {
 /* Default file: modules/_search.scss
 ================================================================================================================== */
 .search {
-
   // Widget display.
   &--widget {
     background: $gray-lightest;
@@ -215,7 +303,6 @@ a {
     &.is-daycare .search--widget-selected,
     &.is-daycare .search--filter-search-submit {
       @include background-set-color('daycare', $transparency: 1);
-
       border-color: $daycare;
     }
 
@@ -225,7 +312,6 @@ a {
     &.is-school .search--widget-selected,
     &.is-school .search--filter-search-submit {
       @include background-set-color('school', $transparency: 1);
-
       border-color: $school;
     }
 
@@ -235,7 +321,6 @@ a {
     &.is-youth .search--widget-selected,
     &.is-youth .search--filter-search-submit {
       @include background-set-color('youth', $transparency: 1);
-
       border-color: $youth;
     }
 
@@ -245,7 +330,6 @@ a {
     &.is-course .search--widget-selected,
     &.is-course .search--filter-search-submit {
       @include background-set-color('course', $transparency: 1);
-
       border-color: $course;
     }
   }
@@ -470,4 +554,65 @@ a {
   text-decoration: none;
   border-color: #fff;
   border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Default file: patterns/_ribbon.scss
+================================================================================================================== */
+
+// Frontpage and profile layout.
+.layout-newsletter-archive,
+.layout-view-page,
+.layout-node,
+.layout-frontpage,
+.layout-profile {
+  .layout-inner > div:nth-child(1),
+  .layout-inner > div:nth-child(4) {
+    background: $gray-lightest;
+  }
+
+  .layout-inner > div:nth-child(2),
+  .layout-inner > div:nth-child(5) {
+    background: $gray-lighter;
+  }
+
+  .layout-inner > div:nth-child(3) {
+    background: $white;
+  }
+}
+
+.field {
+
+  /* Display of node title. */
+  &--title {
+    border-bottom: none;
+    border-width: 0;
+    padding: 0;
+    position: relative;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0.1em;
+    background: none;
+
+    @include breakpoint($node-breakpoint) {
+      border-width: 4px;
+      padding: 0;
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.block {
+  &--header {
+    padding: 21px 21px 0;
+  }
+
+  &--content {
+    padding: 21px;
+  }
+
+  &--field-wrapper {
+    border-bottom: 0;
+  }
 }
