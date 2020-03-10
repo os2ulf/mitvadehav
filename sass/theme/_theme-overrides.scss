@@ -302,8 +302,9 @@ a {
     &.is-daycare .search--filter-dropdown-submit,
     &.is-daycare .search--widget-selected,
     &.is-daycare .search--filter-search-submit {
-      @include background-set-color('daycare', $transparency: 1);
-      border-color: $daycare;
+      @include background-set-color('blue', $transparency: 1);
+      background: rgba($blue, 1);
+      border-color: $blue;
     }
 
     &.is-school,
@@ -311,8 +312,8 @@ a {
     &.is-school .search--filter-dropdown-submit,
     &.is-school .search--widget-selected,
     &.is-school .search--filter-search-submit {
-      @include background-set-color('school', $transparency: 1);
-      border-color: $school;
+      background: rgba($blue, 1);
+      border-color: $blue;
     }
 
     &.is-youth,
@@ -320,8 +321,8 @@ a {
     &.is-youth .search--filter-dropdown-submit,
     &.is-youth .search--widget-selected,
     &.is-youth .search--filter-search-submit {
-      @include background-set-color('youth', $transparency: 1);
-      border-color: $youth;
+      background: rgba($blue, 1);
+      border-color: $blue;
     }
 
     &.is-course,
@@ -329,8 +330,8 @@ a {
     &.is-course .search--filter-dropdown-submit,
     &.is-course .search--widget-selected,
     &.is-course .search--filter-search-submit {
-      @include background-set-color('course', $transparency: 1);
-      border-color: $course;
+      background: rgba($blue, 1);
+      border-color: $blue;
     }
   }
 
@@ -342,11 +343,9 @@ a {
     background: $gray-darker;
   }
 
-
   &--filter-wrapper-inner {
-    background: rgba(255, 255, 255, .85);
+    background: rgba(255, 255, 255, .8);
   }
-
 
   &--filter-search-text[type="text"] {
     border: 1px solid $gray-light;
@@ -359,6 +358,7 @@ a {
     max-width: 35%;
     position: absolute;
     right: 0;
+    color: $white !important;
   }
 
 
