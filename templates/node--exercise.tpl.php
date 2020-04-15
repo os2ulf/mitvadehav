@@ -111,7 +111,6 @@
               <?php print render($content['field_activities']); ?>
               <?php print render($content['field_post_work']); ?>
               <?php print render($content['field_material_suggestions']); ?>
-              <?php print render($content['field_related_content']); ?>
             </div>
           <?php endif; ?>
           <div>
@@ -120,6 +119,7 @@
           </div>
           <?php print render($content['field_video']); ?>
           <?php print render($content['field_educational_material']); ?>
+          <?php print render($content['field_related_content']); ?>
           <div class="block--pdf">
             <a class="block--pdf-link" target="_blank" href="/printpdf/<?php print $node->nid; ?>"><?php print t('Save this offer as pdf'); ?></a>
           </div>
@@ -163,13 +163,13 @@
               </div>
             </div>
           </div>
-          <?php if(!empty($field_related_users)) : ?>
-            <div class="block--dark">
+          <?php if(!empty($field_related_user)) : ?>
+            <div class="block--dark related-users">
               <h2 class="block--header">
                 <?php print t('Visiting sites');?>
               </h2>
               <div class="block--content">
-                <?php print render($content['field_related_users']); ?>
+                <?php print render($content['field_related_user']); ?>
               </div>
             </div>
           <?php endif; ?>
