@@ -94,7 +94,7 @@
         <div class="content--main">
           <h1 class="field--title is-exercise"><?php print render($title); ?></h1>
           <div>
-            <h2><?php print t('The exercise'); ?></h2>
+            <h2 class="block--field-label is-block"><?php print t('The exercise'); ?></h2>
             <?php print render($content['field_full_description']); ?>
           </div>
           <?php if (
@@ -104,8 +104,8 @@
             !empty($field_post_work) ||
             !empty($field_material_suggestions) ||
             !empty($field_related_content)) : ?>
-            <div>
-              <h2><?php print t('How to'); ?></h2>
+            <div class="exercise-activity">
+              <h2 class="block--field-label is-block"><?php print t('How to'); ?></h2>
               <?php print render($content['field_how_to']); ?>
               <?php print render($content['field_background_knowledge']); ?>
               <?php print render($content['field_activities']); ?>
@@ -115,7 +115,7 @@
             </div>
           <?php endif; ?>
           <div>
-            <h2><?php print t('Purpose'); ?></h2>
+            <h2 class="block--field-label is-block"><?php print t('Purpose'); ?></h2>
             <?php print render($content['field_purpose']); ?>
           </div>
           <?php print render($content['field_video']); ?>

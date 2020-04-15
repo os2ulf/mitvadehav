@@ -54,9 +54,11 @@ body {
     &.active-trail {
       background-color: $footer;
     }
+
     &:hover {
       background-color: $page;
     }
+
     &.expanded {
       padding-right: 35px;
 
@@ -614,5 +616,26 @@ a {
 
   &--field-wrapper {
     border-bottom-color: darken($block-light, 10%);
+  }
+}
+
+// Node type exercise
+.node-type-exercise {
+  .exercise-activity {
+    >.block--field-label {
+      font-size: 21px;
+    }
+  }
+
+  .content {
+    &--meta {
+      .block {
+        &--field-text {
+          p:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
 }
