@@ -582,8 +582,23 @@ a {
   }
 }
 
-.field {
+.layout-profile {
+  .layout-inner > div:nth-child(1),
+  .layout-inner > div:nth-child(4) {
+    background: $page;
+  }
 
+  .layout-inner > div:nth-child(2),
+  .layout-inner > div:nth-child(5) {
+    background: $page;
+  }
+
+  .layout-inner > div:nth-child(3) {
+    background: $white;
+  }
+}
+
+.field {
   /* Display of node title. */
   &--title {
     border-bottom: none;
@@ -603,6 +618,9 @@ a {
     }
   }
 
+  &--collection-content {
+    background-color: #FFFFFF;
+  }
 }
 
 .block {
@@ -617,12 +635,18 @@ a {
   &--field-wrapper {
     border-bottom-color: darken($block-light, 10%);
   }
+
+  &--field-logo {
+    background-color: #FFFFFF;
+    margin-left: -21px;
+    margin-right: -21px;
+  }
 }
 
 // Node type exercise
 .node-type-exercise {
   .exercise-activity {
-    >.block--field-label {
+    > .block--field-label {
       font-size: 21px;
     }
   }
@@ -650,3 +674,4 @@ a {
     }
   }
 }
+
