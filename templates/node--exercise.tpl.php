@@ -144,6 +144,7 @@
                 <?php else : ?>
                   <?php print render($content['field_period_select']); ?>
                 <?php endif; ?>
+                <?php print render($content['field_period_info']); ?>
               </div>
                 <div class="block--field-wrapper">
                   <?php print render($content['field_duration_select']); ?>
