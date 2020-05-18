@@ -630,6 +630,8 @@ a {
 
   &--content {
     padding: 21px;
+
+
   }
 
   &--field-wrapper {
@@ -655,6 +657,7 @@ a {
     &--meta {
       .block {
         &--field-text {
+          margin-bottom: 0;
           p:last-child {
             margin-bottom: 0;
           }
@@ -674,4 +677,3 @@ a {
     }
   }
 }
-

@@ -137,8 +137,12 @@
                   <div class="block--field-label"><?php print t('Target group');?></div>
                   <div class="block--field-text"><?php print render($view__target_group_sub); ?></div>
                 <?php endif;?>
-                <?php print render($content['field_activity_select']); ?>
               </div>
+              <?php if(!empty($field_activity_select)) : ?>
+                <div class="block--field-wrapper">
+                  <?php print render($content['field_activity_select']); ?>
+                </div>
+              <?php endif; ?>
               <div class="block--field-wrapper">
                 <?php if(empty($field_period_select)) : ?>
                   <div class="block--field-label"><?php print t('Period'); ?></div>
