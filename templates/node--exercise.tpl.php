@@ -113,10 +113,12 @@
               <?php print render($content['field_material_suggestions']); ?>
             </div>
           <?php endif; ?>
-          <div>
-            <h2 class="block--field-label is-block"><?php print t('Purpose'); ?></h2>
-            <?php print render($content['field_purpose']); ?>
-          </div>
+          <?php if (!empty($field_purpose)) : ?>
+            <div>
+              <h2 class="block--field-label is-block"><?php print t('Purpose'); ?></h2>
+              <?php print render($content['field_purpose']); ?>
+            </div>
+          <?php endif; ?>
           <?php print render($content['field_video']); ?>
           <?php print render($content['field_educational_material']); ?>
           <?php print render($content['field_related_content']); ?>
@@ -130,13 +132,17 @@
               <?php print t('Practical information'); ?>
             </h2>
             <div class="block--content">
-              <div class="block--field-wrapper is-inline">
+              <div class="block--field-wrapper">
                 <?php if (!empty($view__target_group_sub)) : ?>
                   <div class="block--field-label"><?php print t('Target group');?></div>
                   <div class="block--field-text"><?php print render($view__target_group_sub); ?></div>
                 <?php endif;?>
-                <?php print render($content['field_activity_select']); ?>
               </div>
+              <?php if(!empty($field_activity_select)) : ?>
+                <div class="block--field-wrapper">
+                  <?php print render($content['field_activity_select']); ?>
+                </div>
+              <?php endif; ?>
               <div class="block--field-wrapper">
                 <?php if(empty($field_period_select)) : ?>
                   <div class="block--field-label"><?php print t('Period'); ?></div>
