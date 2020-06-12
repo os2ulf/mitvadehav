@@ -687,3 +687,10 @@ a {
     @include strip-link-styles($white);
   }
 }
+
+  h3 {
+    &.impact {
+      font-size: 2.2em;
+    }
+  }
+
