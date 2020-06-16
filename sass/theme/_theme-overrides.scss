@@ -201,19 +201,19 @@ a {
     border-color: $dark-blue;
 
     &.is-dagtilbud {
-      border-color: $daycare;
+      border-color: $daycare-color;
     }
 
     &.is-grundskole {
-      border-color: $school;
+      border-color: $school-color;
     }
 
     &.is-ungdomsuddannelse {
-      border-color: $youth;
+      border-color: $youth-color;
     }
 
     &.is-course {
-      border-color: $course;
+      border-color: $course-color;
     }
 
     &.is-profile {
@@ -658,6 +658,7 @@ a {
       .block {
         &--field-text {
           margin-bottom: 0;
+
           p:last-child {
             margin-bottom: 0;
           }
@@ -687,3 +688,46 @@ a {
     @include strip-link-styles($white);
   }
 }
+
+.paragraphs-item-hero {
+
+  .hero--content {
+    &--theme {
+      &__daycare {
+        background-color: rgba($daycare-color, .7);
+      }
+
+      &__school {
+        background-color: rgba($school-color, .7);
+      }
+
+      &__youth {
+        background-color: rgba($youth-color, .7);
+      }
+
+      &__course {
+        background-color: rgba($course-color, .7);
+      }
+
+      &__black {
+        background-color: rgba($black, .7);
+      }
+
+      &__white {
+        background-color: rgba($white, .7);
+
+        h1, h2, .subline {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+
+h3 {
+  &.impact {
+    font-size: 2.2em;
+  }
+}
+
