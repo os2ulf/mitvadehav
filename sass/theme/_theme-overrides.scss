@@ -533,19 +533,25 @@ a {
 ================================================================================================================== */
 .is-dagtilbud {
   .ribbon {
-    @include background-set-color('daycare', 1);
+    background-color: rgba($daycare-color, 1);
   }
 }
 
 .is-grundskole {
   .ribbon {
-    @include background-set-color('school', 1);
+    background-color: rgba($school-color, 1);
   }
 }
 
 .is-ungdomsuddannelse {
   .ribbon {
-    @include background-set-color('youth', 1);
+    background-color: rgba($youth-color, 1);
+  }
+}
+
+.is-course {
+  .ribbon {
+    background-color: rgba($course-color, 1);
   }
 }
 
