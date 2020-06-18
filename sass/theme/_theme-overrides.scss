@@ -297,7 +297,7 @@ a {
   // Widget display.
   &--widget {
     background: $gray-lightest;
-    color: rgba(0, 0, 0, 0.5);
+    color: #333;
 
     &.is-daycare,
     &.is-daycare .search--filter-dropdown,
@@ -533,19 +533,25 @@ a {
 ================================================================================================================== */
 .is-dagtilbud {
   .ribbon {
-    @include background-set-color('daycare', 1);
+    background-color: rgba($daycare-color, 1);
   }
 }
 
 .is-grundskole {
   .ribbon {
-    @include background-set-color('school', 1);
+    background-color: rgba($school-color, 1);
   }
 }
 
 .is-ungdomsuddannelse {
   .ribbon {
-    @include background-set-color('youth', 1);
+    background-color: rgba($youth-color, 1);
+  }
+}
+
+.is-course {
+  .ribbon {
+    background-color: rgba($course-color, 1);
   }
 }
 
@@ -689,41 +695,48 @@ a {
   }
 }
 
-.paragraphs-item-hero {
+.paragraphs-item {
 
-  .hero--content {
-    &--theme {
-      &__daycare {
-        background-color: rgba($daycare-color, .7);
-      }
+  &-hero {
+    .hero--content {
+      &--theme {
+        &__daycare {
+          background-color: rgba($daycare-color, .7);
+        }
 
-      &__school {
-        background-color: rgba($school-color, .7);
-      }
+        &__school {
+          background-color: rgba($school-color, .7);
+        }
 
-      &__youth {
-        background-color: rgba($youth-color, .7);
-      }
+        &__youth {
+          background-color: rgba($youth-color, .7);
+        }
 
-      &__course {
-        background-color: rgba($course-color, .7);
-      }
+        &__course {
+          background-color: rgba($course-color, .7);
+        }
 
-      &__black {
-        background-color: rgba($black, .7);
-      }
+        &__black {
+          background-color: rgba($black, .7);
+        }
 
-      &__white {
-        background-color: rgba($white, .7);
+        &__white {
+          background-color: rgba($white, .7);
 
-        h1, h2, .subline {
-          color: $black;
+          h1, h2, .subline {
+            color: $black;
+          }
         }
       }
     }
   }
-}
 
+  &-spacer {
+    &--hr {
+      background-color: #d9d9d9;
+    }
+  }
+}
 
 h3 {
   &.impact {
