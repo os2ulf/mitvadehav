@@ -17,7 +17,9 @@ body {
     height: 160px;
 
     &--inner {
-      text-align: center;
+      @include breakpoint(45em) {
+        text-align: center;
+      }
     }
 
     &--logo {
@@ -25,7 +27,11 @@ body {
       top: 60px;
 
       img {
-        width: 375px;
+        width: 210px;
+
+        @include breakpoint(45em) {
+          width: 375px;
+        }
       }
     }
   }
@@ -41,7 +47,9 @@ body {
     @extend %nav--list-link;
 
     &.active-trail {
-      background-color: $footer;
+      @include breakpoint(55em) {
+        background-color: $footer;
+      }
     }
 
     &:hover {
@@ -52,7 +60,9 @@ body {
   &--list-dropdown-item,
   &--list-item {
     &.active-trail {
-      background-color: $footer;
+      @include breakpoint(55em) {
+        background-color: $footer;
+      }
     }
 
     &:hover {
@@ -88,7 +98,9 @@ body {
   text-transform: uppercase;
   font-size: 18px;
 
-  @include strip-link-styles($black);
+  @include breakpoint(55em) {
+    @include strip-link-styles($black);
+  }
 }
 
 
