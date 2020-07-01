@@ -122,9 +122,9 @@
           <?php print render($content['field_video']); ?>
           <?php print render($content['field_educational_material']); ?>
           <?php print render($content['field_related_content']); ?>
-<!--          <div class="block--pdf">-->
-<!--            <a class="block--pdf-link" target="_blank" href="/printpdf/--><?php //print $node->nid; ?><!--">--><?php //print t('Save this offer as pdf'); ?><!--</a>-->
-<!--          </div>-->
+          <div class="block--pdf">
+            <a class="block--pdf-link" target="_blank" href="/printpdf/<?php print $node->nid; ?>"><?php print t('Save this offer as pdf'); ?></a>
+          </div>
         </div>
         <div class="content--meta">
           <div class="block--light">
