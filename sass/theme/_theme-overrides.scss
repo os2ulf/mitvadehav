@@ -237,7 +237,10 @@ a {
     color: $white;
     background: $block-dark;
   }
+
 }
+
+
 
 
 /* Default file: modules/_nav.scss
@@ -683,6 +686,17 @@ a {
         }
       }
     }
+  }
+}
+
+.content {
+  .field--title {
+    font-size: 2.2em;
+    font-weight: normal;
+  }
+
+  .block--field-label {
+    font-weight: normal;
   }
 }
 
