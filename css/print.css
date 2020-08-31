@@ -106,13 +106,11 @@ a {
 }
 
 .content--main {
-    float: left;
     position: relative;
     width: 100%;
 }
 
 .content--meta {
-    float: right;
     position: relative;
     width: 100%;
 }
