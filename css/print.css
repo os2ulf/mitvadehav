@@ -146,8 +146,10 @@ a {
      width: 100%;
  }
 
-.block--dark a {
-    display: none;
+.block--dark a,
+.block--dark a:visited,
+.block--dark a:active {
+    color: #fff;
 }
 
 .block--field-wrapper {
