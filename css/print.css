@@ -106,13 +106,11 @@ a {
 }
 
 .content--main {
-    float: left;
     position: relative;
     width: 100%;
 }
 
 .content--meta {
-    float: right;
     position: relative;
     width: 100%;
 }
@@ -148,8 +146,15 @@ a {
      width: 100%;
  }
 
-.block--dark a {
-    display: none;
+.block--dark a,
+.block--dark a:visited,
+.block--dark a:active {
+    color: #fff;
+}
+
+.related-users a {
+  display: block;
+  padding-bottom: 5px;
 }
 
 .block--field-wrapper {
