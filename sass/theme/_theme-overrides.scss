@@ -694,6 +694,16 @@ a {
     font-size: 2.2em;
     font-weight: normal;
   }
+
+  .block--field-label {
+    font-weight: normal;
+  }
+
+  &--meta {
+    .block--field-label {
+      font-weight: bold;
+    }
+  }
 }
 
 .related-users {
@@ -765,4 +775,3 @@ h3 {
     font-size: 2.2em;
   }
 }
-
