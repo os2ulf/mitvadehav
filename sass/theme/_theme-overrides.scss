@@ -698,6 +698,12 @@ a {
   .block--field-label {
     font-weight: normal;
   }
+
+  &--meta {
+    .block--field-label {
+      font-weight: bold;
+    }
+  }
 }
 
 .related-users {
@@ -769,4 +775,3 @@ h3 {
     font-size: 2.2em;
   }
 }
-
