@@ -169,6 +169,11 @@
                 <?php endif; ?>
               </div>
             </div>
+            <?php if (module_exists('ulf_world_targets') && isset($world_targets)) : ?>
+              <div class="block--field-wrapper">
+                <?php print $world_targets; ?>
+              </div>
+            <?php endif;?>
           </div>
           <?php if(!empty($field_related_user)) : ?>
             <div class="block--dark related-users">
